@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div demo id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/Transponders">Transponders</router-link> |
@@ -28,4 +28,6 @@
     }
   }
 }
+
+@import '../src/styles/main.less';
 </style>

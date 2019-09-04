@@ -1,0 +1,96 @@
+@teal-gray  : #232325;
+@dark-blue  : #161618;
+@white-smoke: #c1c8ce;
+@dark-smoke : #0b0c11;
+@button-blue: #276299;
+@light-gray : #9ea6ad;
+
+
+@background-main      : @dark-blue;
+@background-sub       : @teal-gray;
+@background-button    : @button-blue;
+@background-input-text: @light-gray;
+
+@text-light: @white-smoke;
+@text-dark : @dark-smoke;
+
+
+[demo-headding] {
+    font-weight: bold;
+    font-size  : 1.5rem;
+    color      : @text-light;
+}
+
+[demo-field-description] {
+    font-weight: normal;
+    font-size  : 1rem;
+    color      : @text-light;
+}
+
+[demo-transponder-flow] {
+    display        : flex;
+    justify-content: center;
+    flex-direction : row;
+}
+
+[demo-list-view] {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+[demo-creation-box] {
+    margin          : 1rem;
+    padding         : 2rem;
+    height          : 5rem;
+    background-color: @background-sub;
+}
+
+[demo] {
+    background-color: @background-main;
+    width           : 100vw;
+    height          : 100vh;
+}
+
+[demo-button] {
+    margin          : 0.3rem;
+    width           : 8rem;
+    height          : 2rem;
+    border-radius   : 0.5rem;
+    background-color: @background-button;
+}
+
+[demo-input] {
+    margin          : 0.3rem;
+    padding-left    : 0.2rem;
+    padding-right   : 0.2rem;
+    height          : 2rem;
+    border-radius   : 0.5rem;
+    background-color: @background-input-text;
+    color           : @text-dark;
+}
+
+button {
+    .unselectable;
+    padding         : 0;
+    border          : none;
+    font            : inherit;
+    color           : inherit;
+    background-color: transparent;
+    cursor          : pointer;
+}
+
+input {
+    .unselectable;
+    padding         : 0;
+    border          : none;
+    font            : inherit;
+    color           : inherit;
+    background-color: transparent;
+    cursor          : text;
+}
+
+.unselectable {
+    -webkit-user-select: none;
+}

@@ -1,19 +1,23 @@
 <template>
   <div>
     <!-- create new transponder -->
-    <div>
-      Add Transponder
-      <div>
-        Transponder ID:
-        <input v-model="inputID" />
-        <button v-on:click="AddTransponder()">Add</button>
+    <div demo-transponder-flow>
+      <div demo-headding demo-creation-box>
+        Add Transponder
+        <div demo-field-description>
+          Transponder ID:
+          <input demo-input v-model="inputID" />
+          <button demo-button v-on:click="AddTransponder()">Add</button>
+        </div>
       </div>
-    </div>
-    <!-- list of transponders -->
-    <div>
-      List of transponders:
-      <div v-for="(item) in Transponders" v-bind:key="item.ID">
-          <c-transponder v-bind:transponder=item></c-transponder>
+      <!-- list of transponders -->
+      <div demo-headding>
+        List of transponders:
+        <div demo-list-view>
+          <div v-for="(item) in Transponders" v-bind:key="item.ID">
+            <c-transponder v-bind:transponder="item"></c-transponder>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -27,7 +31,7 @@ import CTransponder from "../components/CTransponder.vue";
 
 @Component({
   components: {
-      'c-transponder': CTransponder,
+    "c-transponder": CTransponder
   }
 })
 export default class VTransponder extends Vue {
@@ -50,3 +54,7 @@ export default class VTransponder extends Vue {
   }
 }
 </script>
+
+<style lang="less">
+@import "../styles/main.less";
+</style>
