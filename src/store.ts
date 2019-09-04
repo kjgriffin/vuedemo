@@ -13,6 +13,10 @@ export default new Vuex.Store({
     AddTransponder(state, transponder: Transponder): void {
        state.transponders.push(transponder); 
     },
+    RemoveTransponder(state, transponder: Transponder): void {
+      const index = state.transponders.indexOf(transponder);
+      state.transponders.splice(index, 1);
+    }
   },
   actions: {
 

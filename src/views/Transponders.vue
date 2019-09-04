@@ -12,7 +12,9 @@
     <!-- list of transponders -->
     <div>
       List of transponders:
-      <div v-for="(item) in Transponders" v-bind:key="item.ID">Transponder: {{item.ID}}</div>
+      <div v-for="(item) in Transponders" v-bind:key="item.ID">
+          <CTransponder v-bind:transponder=item></CTransponder>
+      </div>
     </div>
   </div>
 </template>
@@ -21,9 +23,12 @@
 import Transponder from "../models/Transponder";
 import { Component, Vue } from "vue-property-decorator";
 import store from "../store";
+import CTransponder from "../components/CTransponder.vue";
 
 @Component({
-  components: {}
+  components: {
+      CTransponder,
+  }
 })
 export default class VTransponder extends Vue {
   private inputID: number = 0;
