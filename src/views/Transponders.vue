@@ -13,7 +13,7 @@
     <div>
       List of transponders:
       <div v-for="(item) in Transponders" v-bind:key="item.ID">
-          <CTransponder v-bind:transponder=item></CTransponder>
+          <c-transponder v-bind:transponder=item></c-transponder>
       </div>
     </div>
   </div>
@@ -27,7 +27,7 @@ import CTransponder from "../components/CTransponder.vue";
 
 @Component({
   components: {
-      CTransponder,
+      'c-transponder': CTransponder,
   }
 })
 export default class VTransponder extends Vue {
